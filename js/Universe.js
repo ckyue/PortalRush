@@ -8,16 +8,16 @@ class Universe {
 		this.cellLength = options.cellLength;
 	}
 	create() {
-		// Assign the tilemap in relation with the length and height of the 
+		// Assign the tilemap in relation with the length and height of the
 		// universe.
 		for (let i = 0; i<this.height; i++) {
 			this.cells.push(new Array());
 			for (let j = 0; j<this.length; j++) {
-				// assign each cell a structure with the id, state and 
+				// assign each cell a structure with the id, state and
 				// coordinates of that cell
 				let id = i*this.length+j
 				this.cells[i].push({
-					id, 
+					id,
 					state:0,
 					x:j*this.cellLength,
 					y:i*this.cellHeight,
@@ -27,12 +27,13 @@ class Universe {
 						// side neigbours
 						id-1, id+1,
 						//bottom neigbours
-						id+this.length-1, id+this.length, id+this.length+1 
+						id+this.length-1, id+this.length, id+this.length+1
 					]
 				});
 			}
 		}
 	}
+
 }
 
 module.exports = Universe;

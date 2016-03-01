@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Game Of Life</title>
+	<title>Portal</title>
 	<style type="text/css">
 		#universe{
 			display: block;
 			margin: 20px auto;
-			border: 1px solid black;
+			/*border: 1px solid black;*/
 		}
 		#start{
 			display: block;
 			width: 100px;
 			margin: 10px auto;
 		}
+		#topImg{
+				position: absolute;
+				margin: auto;
+				left: 0;
+				right: 0;
+				top:0;
+		}
+		#botImg{
+			position: absolute;
+			margin: auto;
+			left: 0;
+			right: 0;
+		}
+		p{
+			height:360px;
+			z-index: -1;
+		}
 	</style>
 </head>
 <body>
-	<canvas id="universe" width="256" height="960"></canvas>
+	<p></p>
+	<img id="topImg" src="./images/PortalRushLogo_small.png">
+	<!-- <canvas id="universe" width="500" height="1875"></canvas> -->
+	<canvas id="universe" width="256" height="960" style="background: url('./images/Background.png')"></canvas>
 	<button id="start" >Start</button>
-
+	<!-- <img id="botImg" src="./images/PortalRushLogo_small.png"> -->
 	<script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>
